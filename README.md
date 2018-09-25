@@ -32,3 +32,7 @@ Options:
 * Extend each path in `cube.gcode` by 4mm (default) and output to stdout. The GCODE for tool off is `G1 Z4`
 
   `gcode-path-extender --tool-off-gcode 'G1 Z4' cube.gcode`
+
+## Proof
+
+I uploaded sample files [bathtub.gcode](https://raw.githubusercontent.com/vietquocnguyen/gcode-path-extender/master/sample_files/bath-tub.gcode) and [bathtub-extended](https://raw.githubusercontent.com/vietquocnguyen/gcode-path-extender/master/sample_files/bath-tub-extended.gcode) so you can visualize the difference in a GCODE Viewer like http://jherrm.com/gcode-viewer/.
