@@ -1,0 +1,26 @@
+{
+  "name": "gcode-path-extender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://vietquocnguyen@github.com/vietquocnguyen/gcode-path-extender.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vietquocnguyen/gcode-path-extender/issues"
+  },
+  "homepage": "https://github.com/vietquocnguyen/gcode-path-extender#readme",
+  "dependencies": {
+    "commander": "^2.18.0"
+  },
+  "bin": {
+    "gcode-path-extender": "./index.js"
+  }
+}
