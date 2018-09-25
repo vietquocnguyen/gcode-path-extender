@@ -6,7 +6,7 @@ const fs = require('fs')
 
 program
   .version('1.0.0')
-  .usage('[options] <input file> <output file>')
+  .usage('[options] <input file> [output file]')
   .option('-t, --tool-off-gcode [gcode]', 'Tool Off GCODE', 'G1 Z3')
   .option('-e, --extend [millimeters]', 'Extend each path by how many millimeters', 4)
   .parse(process.argv);
