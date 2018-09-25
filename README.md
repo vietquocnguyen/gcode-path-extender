@@ -20,4 +20,15 @@ Options:
 
 ## Example
 
-`gcode-path-extender --extend 6 cube.gcode cube-extended.gcode`
+* Extend each path in `cube.gcode` by 6mm and save it to `cube-extended.gcode`
+
+  `gcode-path-extender --extend 6 cube.gcode cube-extended.gcode`
+
+
+* Extend each path in `cube.gcode` by 6mm and output to stdout
+
+  `gcode-path-extender --extend 6 cube.gcode`
+
+* Extend each path in `cube.gcode` by 4mm (default) and output to stdout. The GCODE for tool off is `G1 Z4`
+
+  `gcode-path-extender --tool-off-gcode 'G1 Z4' cube.gcode`
