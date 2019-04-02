@@ -30,7 +30,7 @@ let newChunks = chunks.map(function(chunk, chunkIndex){
     newChunk += "; INJECTION START\n"
     // console.log('hi', chunk)
     let totalDistance = 0
-    let initialLine = chunk.match(/G0 X([0-9.]+) Y([0-9.]+)/)
+    let initialLine = chunk.match(/G0 X(-?[0-9.]+) Y(-?[0-9.]+)/)
     if (!initialLine) {
       // console.log(chunkIndex)
       throw new Error(`No initial line for chunk #${chunkIndex}`)
@@ -41,7 +41,7 @@ let newChunks = chunks.map(function(chunk, chunkIndex){
 
     var lines = chunk.match(/G1 X.*/g)
     let lineArray = lines.map(function(line, lineIndex){
-      let lineMatch = line.match(/X([0-9.]+) Y([0-9.]+)/)
+      let lineMatch = line.match(/X(-?[0-9.]+) Y(-?[0-9.]+)/)
       if (!lineMatch) throw new Error('Line Match Corrupted')
       return {
         raw: line,
@@ -83,7 +83,7 @@ let newChunks = chunks.map(function(chunk, chunkIndex){
     // console.log('Up Until Line Number:', upUntilLineNumber, 'of', lineArray.length)
     
     for(let i = 0; i <= upUntilLineNumber; i++) {
-      newChunk += lines[i].match(/G1 X[0-9.]+ Y[0-9.]+/g)[0] + "\n"
+      newChunk += lines[i].match(/G1 X-?[0-9.]+ Y-?[0-9.]+/g)[0] + "\n"
     }
     
 
